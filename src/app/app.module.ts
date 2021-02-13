@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductsComponent } from './components/products/products.component';
 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { ProductsComponent } from './components/products/products.component';
   ],
   imports: [
     BrowserModule,
-    App_routing
+    App_routing,
+    HttpClientModule
   ],
   providers: [
     ProductosService

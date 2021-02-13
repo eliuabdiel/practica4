@@ -7,13 +7,17 @@ import { ProductosService } from 'src/app/servicios/productos.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  listProducts: any [] = [];
 
   constructor(private productosService: ProductosService) {
 
    }
 
-  ngOnInit(): void {
-    this.productosService.get();
+  async ngOnInit() {
+
+    this.listProducts = await this.productosService.get().toPromise();
+    console.log(this.listProducts)
+    console.log('termino')
   }
 
 }

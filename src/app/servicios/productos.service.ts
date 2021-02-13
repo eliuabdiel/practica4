@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,10 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class ProductosService {
 
-  constructor() {
-    
+  constructor(public http: HttpClient) {
+    console.log('hola soy el servicio productos')
    }
    get(){
-     console.log('este es un get del servicio productos')
+     return this.http.get<any[]>("http://localhost:5000/api/products");
    }
 }
