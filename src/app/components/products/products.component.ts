@@ -14,10 +14,7 @@ export class ProductsComponent implements OnInit {
    }
 
   async ngOnInit() {
-
     this.listProducts = await this.productosService.get().toPromise();
-    console.log(this.listProducts)
-    console.log('termino')
   }
 
 }

@@ -14,7 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductsComponent } from './components/products/products.component';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { MarcasComponent } from './components/marcas/marcas.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http'
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    ProductsComponent
+    ProductsComponent,
+    MarcasComponent
   ],
   imports: [
     BrowserModule,
