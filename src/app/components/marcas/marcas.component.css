@@ -1,0 +1,16 @@
+.title-animation {
+    position: relative;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}

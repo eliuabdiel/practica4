@@ -10,6 +10,6 @@ export class MarcasService {
   constructor(public http: HttpClient) {
   }
   get(){
-    return this.http.get<any[]>("http://localhost:5000/api/products");
+    return this.http.get<any[]>("http://localhost:5000/api/marcas");
   }
 }

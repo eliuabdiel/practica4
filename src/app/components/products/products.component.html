@@ -1,7 +1,10 @@
+<div>
+  <h1 class="title-animation">Productos</h1>
+</div>
 
 <div class="row justify-content-around">
-  <div class="card mb-4 d-flex flex-column" style="max-width: 350px;" *ngFor="let productos of  listProducts" >
-    <div class="card-header d-flex align-items-center" style="height: 50%;" >
+  <div class="card mb-4" style="max-width: 350px;" *ngFor="let productos of  listProducts" >
+    <div class="card-header d-flex align-items-center" style="height: 50%; flex: auto;" >
       <img src="{{productos.imgSrc}}" class="card-img-top" alt="...">
     </div>
     

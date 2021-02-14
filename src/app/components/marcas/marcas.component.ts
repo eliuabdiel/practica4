@@ -7,11 +7,13 @@ import { MarcasService } from 'src/app/servicios/marcas.service';
   styleUrls: ['./marcas.component.css']
 })
 export class MarcasComponent implements OnInit {
-  listProducts: any [] = [];
+  listMarcas: any [] = [];
   constructor(private marcasService: MarcasService) { }
 
   async ngOnInit() {
-    this.listProducts = await this.marcasService.get().toPromise();
+   
+    this.listMarcas = await this.marcasService.get().toPromise();
+    
   }
 
 }

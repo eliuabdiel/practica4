@@ -1,18 +1,17 @@
+<div>
+  <h1 class="title-animation">Marcas</h1>
+</div>
+
+
 <div class="row justify-content-around">
-    <div class="card mb-4 d-flex flex-column" style="max-width: 350px;" *ngFor="let productos of  listProducts" >
-      <div class="card-header d-flex align-items-center" style="height: 50%;" >
-        <img src="{{productos.imgSrc}}" class="card-img-top" alt="...">
-      </div>
-      
-      <div class="card-body" style="flex: none;">
-        <h5 class="card-title">{{productos.nombre}}</h5>
-        <p class="card-text">{{productos.descripcion}}</p>
-        <p class="card-text"><small class="text-muted">{{productos.precio | currency}}</small></p>
-  
-        <a  class="btn btn-outline-success btn-block"> 
-          Ver mas...
-        </a>
-      </div>
+  <div class="card mb-4" style="max-width: 350px; min-width: 350px; width: 350px;" *ngFor="let marcas of  listMarcas" >
+    <div class="card-header d-flex align-items-center" style="height: 50%; flex:auto;" >
+      <img src="{{marcas.imgSrc}}" class="card-img-top" alt="{{marcas.nombre | titlecase}}">
+    </div>
+    
+    <div class="card-body" style="flex: none;">
+      <h5 class="card-title text-center m-0">{{marcas.nombre | titlecase}}</h5>
     </div>
   </div>
+</div>
   
