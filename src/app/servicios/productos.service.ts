@@ -11,4 +11,7 @@ export class ProductosService {
    get(){
      return this.http.get<any[]>("http://localhost:5000/api/products");
    }
+   getWithId(id:number){
+    return this.http.get<any[]>("http://localhost:5000/api/products/"+id);
+   }
 }

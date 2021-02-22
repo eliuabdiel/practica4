@@ -1,0 +1,19 @@
+<h1>{{product.nombre}} <small>{{product.precio | currency}}</small></h1>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-4" style="flex:auto">
+        <img src="{{product.imgSrc}}" alt="{{product.nombre}}" class="img-fuid" style="max-width: 350px; min-width: 350px;">
+        <br><br>
+        <a href="" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{product.nombre}}</h3>
+        <hr>
+        <p>
+            {{product.descripcion}}
+        </p>
+        <span>{{product.precio | currency}}</span>
+    </div>
+</div>

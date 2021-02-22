@@ -2,6 +2,7 @@ import { RouterModule,Routes } from '@angular/router'
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { MarcasComponent } from './components/marcas/marcas.component';
+import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
 
 const App_routes: Routes = [
@@ -9,6 +10,7 @@ const App_routes: Routes = [
     {path: 'about', component: AboutComponent},
     {path: 'products', component: ProductsComponent},
     {path: 'marcas', component: MarcasComponent},
+    {path: 'product/:id', component: ProductComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ]
 
