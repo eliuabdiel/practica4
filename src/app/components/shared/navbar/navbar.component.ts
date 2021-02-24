@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductosService } from 'src/app/servicios/productos.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productosService: ProductosService) { }
 
   ngOnInit(): void {
+
+  }
+
+  async buscarProducto(txtProducto){
+    console.log(txtProducto);
+    const productos = await this.productosService.getItemBusqueda(txtProducto).toPromise();
+    console.log(productos)
   }
 
 }

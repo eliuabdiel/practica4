@@ -21,9 +21,9 @@
           <a class="nav-link" [routerLink]="['marcas']">Marcas</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form class="form-inline my-2 my-lg-0" (keydown.enter)="$event.preventDefault()">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Producto" (keyup.enter)="buscarProducto(txtBuscarProductos.value)" #txtBuscarProductos aria-label="Search">
+        <button (click)="buscarProducto(txtBuscarProductos.value)" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
       </form>
     </div>
   </nav>

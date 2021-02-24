@@ -14,4 +14,8 @@ export class ProductosService {
    getWithId(id:number){
     return this.http.get<any[]>("http://localhost:5000/api/products/"+id);
    }
+
+   getItemBusqueda(textoBusqueda:string){
+     return this.http.get<any[]>("http://localhost:5000/api/products/search/"+textoBusqueda);
+   }
 }
